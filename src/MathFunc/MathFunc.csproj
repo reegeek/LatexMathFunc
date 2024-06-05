@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFrameworks>$(DefaultTargetFrameworks)</TargetFrameworks>
@@ -10,5 +10,32 @@
     <Company />
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Antlr4.Runtime.Standard" Version="4.13.1" />
+    <PackageReference Include="Antlr4BuildTasks" Version="12.8.0" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Antlr4 Include="LatexLexer.g4">
+      <Listener>true</Listener>
+      <Visitor>true</Visitor>
+      <GAtn>true</GAtn>
+      <Package>LatexGrammar</Package>
+      <Error>true</Error>
+      <AntlrToolJarDownloadDir>$(ResultDir)\antlrTool</AntlrToolJarDownloadDir>
+      <JavaDownloadDirectory>$(ResultDir)\Java</JavaDownloadDirectory>
+    </Antlr4>
+  </ItemGroup>
+  <ItemGroup>
+    <Antlr4 Include="LatexParser.g4">
+      <Listener>true</Listener>
+      <Visitor>true</Visitor>
+      <GAtn>true</GAtn>
+      <Package>LatexGrammar</Package>
+      <Error>true</Error>
+      <AntlrToolJarDownloadDir>$(ResultDir)\antlrTool</AntlrToolJarDownloadDir>
+      <JavaDownloadDirectory>$(ResultDir)\Java</JavaDownloadDirectory>
+    </Antlr4>
+  </ItemGroup>
 </Project>
 

@@ -7,6 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MathFunc", "src\MathFunc\Ma
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{7B3673B7-E608-4D4F-B84B-54A9CA68FE0E}"
 	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
 		build\Common.props = build\Common.props
 		src\Directory.Build.props = src\Directory.Build.props
 	EndProjectSection
