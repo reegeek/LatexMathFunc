@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>$(DefaultTargetFrameworks)</TargetFrameworks>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Nuget">
+    <Description>Latex parser from mathematical functions</Description>
+    <PackageTags>C#;antlr4;latex;maths</PackageTags>
+    <Company />
+  </PropertyGroup>
+
+</Project>
+
