@@ -27,21 +27,20 @@ fragment X: [Xx];
 fragment Y: [Yy];
 fragment Z: [Zz];
 
-INT: [0-9]+;
-ID: [A-Za-z_#]([A-Za-z#_0-9.])*;
-SPACE: [ \r\t\u000C\n]+ -> channel(HIDDEN);
+fragment LOWERCASE : [a-z] ;
+fragment UPPERCASE : [A-Z] ;
+fragment DIGIT : [0-9] ;
 
-COMMA: ',';
+REAL_NUMBER: (MINUS?) (DIGIT+) (([.]DIGIT*)?);
+WHITESPACE: (' ' | '\t') -> channel(HIDDEN);
+NEWLINE: ('\r'?'\n' | 'r')+;
 
-AND: A N D;
-OR: O R;
-FOR: F O R;
-BASKET: B A S K E T;
-WITH: W I T H;
-ALL: A L L;
-APPLY: A P P L Y;
-DISCOUNT: D I S C O U N T;
-TO: T O;
-MORE_Q: M O R E;
+fragment ASTERISK: '*';
+fragment SLASH: '/';
+fragment PLUS: '+';
+fragment MINUS: '-';
 
-PERCENT: '%';
+COMMUTATIVE_OPERATOR: ASTERISK | SLASH | PLUS | MINUS;
+
+LP: '(';
+RP: ')';

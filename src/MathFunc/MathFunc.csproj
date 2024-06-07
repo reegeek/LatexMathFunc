@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFrameworks>$(DefaultTargetFrameworks)</TargetFrameworks>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <PropertyGroup Label="Nuget">
@@ -16,18 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Antlr4 Include="LatexLexer.g4">
-      <Listener>true</Listener>
-      <Visitor>true</Visitor>
-      <GAtn>true</GAtn>
-      <Package>LatexGrammar</Package>
-      <Error>true</Error>
-      <AntlrToolJarDownloadDir>$(ResultDir)\antlrTool</AntlrToolJarDownloadDir>
-      <JavaDownloadDirectory>$(ResultDir)\Java</JavaDownloadDirectory>
-    </Antlr4>
-  </ItemGroup>
-  <ItemGroup>
-    <Antlr4 Include="LatexParser.g4">
+    <Antlr4 Include="Grammar\*.g4">
       <Listener>true</Listener>
       <Visitor>true</Visitor>
       <GAtn>true</GAtn>
