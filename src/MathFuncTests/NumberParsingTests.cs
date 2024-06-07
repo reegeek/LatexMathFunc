@@ -25,6 +25,7 @@ namespace MathFuncTests
         [TestCase("12")]
         [TestCase("-12.5")]
         [TestCase("123.5")]
+        [TestCase("123.")]
         public void should_be_real_number_token(string str)
         {
             //arrange
@@ -45,6 +46,7 @@ namespace MathFuncTests
         [TestCase("10", 10)]
         [TestCase("-1.5", -1.5)]
         [TestCase("123.5678", 123.5678)]
+        [TestCase("123.", 123)]
         public void should_parse_number(string str, double expected)
         {
             //arrange

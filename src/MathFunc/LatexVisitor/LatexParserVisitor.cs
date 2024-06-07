@@ -3,6 +3,4 @@ using MathFunc.Expression;
 
 namespace MathFunc.LatexVisitor;
 
-public partial class LatexParserVisitor : LatexParserBaseVisitor<IMathematicalExpression>
-{
-}
+public partial class LatexParserVisitor : LatexParserBaseVisitor<IMathematicalExpression>;
