@@ -38,7 +38,7 @@ namespace MathFuncTests
             //Assert
             var tokenStream = stream.ShouldBeAssignableTo<CommonTokenStream>();
             tokenStream.Size.ShouldBe(2);
-            tokenStream.Get(0).Type.ShouldBe(LatexParser.REAL_NUMBER);
+            tokenStream.Get(0).Type.ShouldBe(LatexParser.POSITIVE_NUMBER);
         }
 
         [TestCase("0", 0)]

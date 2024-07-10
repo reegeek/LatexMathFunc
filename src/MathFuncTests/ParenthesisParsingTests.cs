@@ -33,7 +33,7 @@ internal class ParenthesisParsingTests
         //Assert
         var tokenStream = stream.ShouldBeAssignableTo<CommonTokenStream>();
         tokenStream.Get(0).Type.ShouldBe(LatexParser.LP);
-        tokenStream.Get(1).Type.ShouldBe(LatexParser.REAL_NUMBER);
+        tokenStream.Get(1).Type.ShouldBe(LatexParser.POSITIVE_NUMBER);
         tokenStream.Get(2).Type.ShouldBe(LatexParser.RP);
     }
 

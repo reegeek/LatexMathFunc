@@ -31,16 +31,16 @@ fragment LOWERCASE : [a-z] ;
 fragment UPPERCASE : [A-Z] ;
 fragment DIGIT : [0-9] ;
 
-REAL_NUMBER: (MINUS?) (DIGIT+) (([.]DIGIT*)?);
-WHITESPACE: (' ' | '\t') -> channel(HIDDEN);
-NEWLINE: ('\r'?'\n' | 'r')+;
-
 fragment ASTERISK: '*';
 fragment SLASH: '/';
 fragment PLUS: '+';
-fragment MINUS: '-';
+MINUS: '-';
 
 COMMUTATIVE_OPERATOR: ASTERISK | SLASH | PLUS | MINUS;
+
+POSITIVE_NUMBER:(DIGIT+) (([.]DIGIT*)?);
+WHITESPACE: (' ' | '\t') -> channel(HIDDEN);
+NEWLINE: ('\r'?'\n' | 'r')+;
 
 LP: '(';
 RP: ')';
